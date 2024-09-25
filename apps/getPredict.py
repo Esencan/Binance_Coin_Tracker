@@ -1,21 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 """
-GUI ile grafik oluşturma il ilgili yapılan çalışma
-
-Emre ESENCAN
-21 Eylül 2024
-
-Arima modeli ile periyod kadar sonrası için öngörü hesapala işlemi
+@author Emre ESENCAN
 """
-
-
 from binance import Client
 import pandas as pd
 from statsmodels.tsa.arima.model import ARIMA
-
-
 
 class getPredict:
 

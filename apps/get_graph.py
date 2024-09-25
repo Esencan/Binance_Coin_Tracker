@@ -7,23 +7,19 @@ GUI ile grafik oluşturma il ilgili yapılan çalışma
 """
 
 
-import time
+
 import numpy as np
 import pandas_ta as ta
 import matplotlib.pyplot as plt
 from binance import Client
 import pandas as pd
 import datetime
-import sys
-import mplfinance as mpf
 
 class getGraph:
-
 
     client = None
     server_time = None
     ticker = None
-
 
     def __init__(self):
         '''
@@ -34,10 +30,8 @@ class getGraph:
         self.titles = ['open_time', 'open', 'high', 'low', 'close', 'volume', 'close_time',
           'quo_ass_vol', 'num_of_tra', 'tbbav', 'tbqav', 'ignore']
 
-
     def get_server_time(self, format):
         """
-
         @param format: "%d-%m-%Y %H:%M:%S" şeklinde verilmeli
         @return:
         """
@@ -52,7 +46,6 @@ class getGraph:
         
     def get_data(self, symbol, period, date1, date2):
         """
-
         @param symbol: coin ismi ör: XLMUSDT
         @param period: 1h, 1w gibi periyodalr
         @param time_interval: zaman aralığı
@@ -184,15 +177,12 @@ class getGraph:
 
         return value, direnc, destek
 
-
     def run(self, symbol, period, date1, date2, title, indicators):
-
 
         data = self.get_data(symbol, period, date1, date2)
         data = self.calculate_bbs(data)
         data = self.calculate_stochastic(data,14,3,3)
         data = self.calculate_sma(data, 20)
-        
-        
+
         self.draw_graph(data, symbol, title, indicators)
         return data
