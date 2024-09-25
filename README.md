@@ -1,31 +1,17 @@
-AÇIKLAMA
+DESCRIPTION
 
-EsencanCoinTracker basit olarak Binance üzerinden verileri anlık olarak çekerek, 
-istenilen coin'e ait grafik çizdirebilir. Çizilen grafik üzerine gelişme ve ekleme 
-sürecinde olan indicatörler ekleyebilir. ARIMA öngörü modeli ile periyota 
-bağlı olarak bir sonraki periyodun tahminlenmesini gerçekleştirir. Ayrıca ister kendinizin 
-hazırladığı veya Binance'ta spot piyasada işlem gören tüm coinleri analiz ederek alım 
-seviyesine uygun olan coinleri listeler.
+EsencanCoinTracker simply fetches real-time data from Binance and can plot a graph for the desired coin. It can add indicators that are in the development and improvement stages to the plotted graph. It performs predictions for the next period based on the ARIMA forecasting model. Additionally, it lists coins suitable for purchase by analyzing all coins traded in the spot market on Binance or those you have prepared yourself.
 
-COIN BULMA
+FINDING COINS
 
-Veriler LSE (Least Sequare Estimation) ile analiz edilerek periyoda bağlı olarak ana 
-trend bilgisi elde edilir. Verilerin standart sapma değerleri hesaplanarak bu standart sapmalar
-ana trend bilgisine eklenerek direnç ve destek seviyeleri oluşturulur. Anlık değeri destek 
-seviyesinin altında kalması durumunda coin alıma uygun olarak listelenir.
+Data is analyzed using LSE (Least Square Estimation) to obtain the main trend information based on the period. Resistance and support levels are created by calculating the standard deviation values of the data and adding these standard deviations to the main trend information. If the current value falls below the support level, the coin is listed as suitable for purchase.
 
+FORECASTING
 
-ÖNGÖRÜ
+For a selected coin, predictions are made using the ARIMA forecasting model for a specific time range and period. For example, if the period is marked as 1 day, it predicts the value for the next day. It should be noted that the accuracy of the forecast depends on how optimally the past data is selected. It is important to remember that this is a forecast and everything can change instantly in live markets.
 
-Seçilen Coin'e ait belirli bir zaman aralığında ve belirli bir periyotda ARIMA öngörü modeli ile
-tahminleme yapılır. Periyod örneğin 1 gün olarak işaretlenmiş ise 1 gün sonrası değeri tahminlemektedir.
-Unutulmamalıdır ki geçmiş verisi nekadar optimum seçilirse, öngörü doğruluğu buna bağlı olarak değişir.
-Yapılan işlemin bir öngörü olduğu ve canlı piyasalarda herşeyin anlık değişebileceği unutulmamalıdır.
+INDICATORS
 
-İNDİKATÖRLER
+More indicators will be added during the development process. Currently, trend lines, Bollinger bands, and average indicators have been designed. In the developing process, it will be possible for users to select parameters for these indicators.
 
-Gelişme süresince daha fazla indikatör eklenecektir. Şimdilik Trend çizgileri, bollinger bantları ve ortalama
-indikatörleri tasarlanmıştır. Gelişen süreçte bu indikatörlerde parametrelerin kullanıcı tarafından seçilmesi
-olabilecektir.
-
-GEREKSİNİMLER
+REQUIREMENTS
