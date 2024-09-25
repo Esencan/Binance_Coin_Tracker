@@ -1,11 +1,9 @@
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import QDate, QStringListModel
-from PyQt5.QtGui import QStandardItemModel, QStandardItem
+from PyQt5.QtCore import QStringListModel
 from UI_Templates.main_python import Ui_MainWindow
 from apps.get_graph import getGraph
 from apps.getPredict import getPredict
 from apps.findCoins import Find_Coin
-from datetime import datetime as dt
 from binance.client import Client
 
 class Main(QMainWindow):
