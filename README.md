@@ -14,4 +14,4 @@ INDICATORS
 
 More indicators will be added during the development process. Currently, trend lines, Bollinger bands, and average indicators have been designed. In the developing process, it will be possible for users to select parameters for these indicators.
 
-REQUIREMENTS
+REQUIREMENTS.
